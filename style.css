@@ -1,0 +1,29 @@
+*{
+    background-color: #4cfff7;
+    margin:0;
+}
+table {
+    padding: 1%;
+    height: 50%;
+    width: 50%;
+    margin: auto;
+}
+td {
+    width: 5vh;
+    height: 6vh;
+    border: 1px solid black;
+}
+.play{
+    margin: 5%;
+    width: 10%;
+    float: left;
+    height: 50px;
+}
+#score{
+    margin-top: 5%;
+    float: left;
+    background-color: #3b6a5e;
+    width: 200px;
+    height: 3   00px;
+    overflow: auto;
+}
