@@ -4,6 +4,7 @@ if(window.DeviceMotionEvent){
     console.log("DeviceMotionEvent is not supported");
 }
 
+alert("hello!")
 function motion(event){
 
     console.log("Accelerometer: "
