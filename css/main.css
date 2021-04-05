@@ -28,6 +28,11 @@ html {
     background-size: contain;
 }
 
+#game-object__wall_strong {
+    background: url('../img/one.jpg');
+    background-size: 230%;
+}
+
 
 main {
     width: 1100px;
@@ -77,5 +82,7 @@ main {
     transform: translateX(-50%);
     transform: translateY(-50%);
     border-radius: 10px;
-    background-color: red;
+    background: url('../img/fire.png');
+    background-size: 350%;
+    background-position: 85px;
 }

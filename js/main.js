@@ -1,5 +1,5 @@
 var GAME_TIMER_INTERVAL = 300; // задаёт интервал времени, за который будет выполняться один шаг в игре
-var FAER_TIMER_INTERVAL = 100;
+var FAER_TIMER_INTERVAL = 150;
 var PLAYER_LIFE_COUNT = 3;
 var ENEMY_TANKS_COUNT = 21;
 var IS_GAME_OVER = false;

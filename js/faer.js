@@ -77,21 +77,27 @@ class FaersObj {
                 Number(block[i].style.left.replace("px", ' ')) + 64 > this.left
                 && Number(block[i].style.top.replace("px", ' ')) <= this.top)) {
 
-                this.faerHtml.style.top = `${Number(block[i].style.top.replace("px", ' ')) + 32}px`;
-                this.faerHtml.style.left = `${Number(block[i].style.left.replace("px", ' ')) + 32}px`;
-
-                // for (let key in orientation_faer){
-                //     if (key = this.orient){
-                //         console.log(orientation_faer[key],"asfsaf")
-                //         this[orientation_faer[key]]
-                //     }
-                // }
-                //
-                block[i].remove()
-                this.isAlive = false
-                setTimeout(() => {
+                if (block[i].id == "game-object__wall_strong") {
+                    console.log("stena")
+                    this.isAlive = false
                     this.faerHtml.remove()
-                }, 10)
+                } else {
+                    this.faerHtml.style.top = `${Number(block[i].style.top.replace("px", ' ')) + 32}px`;
+                    this.faerHtml.style.left = `${Number(block[i].style.left.replace("px", ' ')) + 32}px`;
+
+                    // for (let key in orientation_faer){
+                    //     if (key = this.orient){
+                    //         console.log(orientation_faer[key],"asfsaf")
+                    //         this[orientation_faer[key]]
+                    //     }
+                    // }
+                    //
+                    block[i].remove()
+                    this.isAlive = false
+                    setTimeout(() => {
+                        this.faerHtml.remove()
+                    }, 10)
+                }
             }
         }
 
@@ -121,18 +127,18 @@ class FaersObj {
                     } else {
 
                         PLAYER_LIFE_COUNT--
-                        alert("Осталось: "+PLAYER_LIFE_COUNT+" жизни!")
+                        alert("Осталось: " + PLAYER_LIFE_COUNT + " жизни!")
                     }
 
                 }
-                if (arrTANKS[i].tankHtml_ID == "enemy_1" || arrTANKS[i].tankHtml_ID == "enemy_2" || arrTANKS[0].tankHtml_ID == "enemy_3") {
+                if (arrTANKS[i].tankHtml_ID == "enemy_1" || arrTANKS[i].tankHtml_ID == "enemy_2" || arrTANKS[i].tankHtml_ID == "enemy_3") {
                     ENEMY_TANKS_COUNT--
                     if (ENEMY_TANKS_COUNT < 1) {
                         alert("Побeдa!")
                         location.reload()
                     } else {
                         $textCountTanks.innerHTML = `осталось убить: ${ENEMY_TANKS_COUNT} танков`
-                        alert("осталось убить: "+ENEMY_TANKS_COUNT+" танков")
+                        alert("осталось убить: " + ENEMY_TANKS_COUNT + " танков")
                     }
                 }
 
